@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> Hmall </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<script src="../js/jquery-2.2.4.min.js"></script>
+
+	<link rel="stylesheet" href="../css/default.css" />
+	<script src="../js/ui.js"></script>
+
+</head>
+<body>
+
+	<!-- s: header -->
+	<header id="header_container">
+		<h1 class="title">배송지 등록</h1>
+		<div class="rBox">
+			<a href="#" class="btn prev"><span>이전</span></a>
+			<a href="#" class="btn close"><span>종료</span></a>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<div id="body_container" class="address_page hasbtn">
+		<div class="body_inner">
+
+			<div class="content_section entry">
+				<!-- s: table -->
+				<div class="table_type01">
+					<table>
+						<col style="width:80px;" />
+						<col />
+						<tbody>
+							<tr>
+								<th>받으실 분</th>
+								<td>
+									<div class="txtEntry02"><input type="number" /></div>
+								</td>
+							</tr>
+							<tr>
+								<th class="vat">배송주소</th>
+								<td>
+									<a href="#" class="btn_type02">우편번호로 찾기</a>
+									<div class="t_subTxt01">서울시 금천구 디지털 2로 123</div>
+									<div class="gp01">
+										<div class="txtEntry02"><input type="text" /></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>휴대폰번호</th>
+								<td>
+									<div class="telNumber">
+										<div class="selectBox01">
+											<em class="labelTxt">010</em>
+											<select>
+												<option>010</option>
+												<option>011</option>
+												<option>012</option>
+											</select>
+										</div>
+										<span class="dash">-</span>
+										<div class="txtEntry02"><input type="number" /></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>전화번호</th>
+								<td>
+									<div class="telNumber">
+										<div class="selectBox01">
+											<em class="labelTxt">02</em>
+											<select>
+												<option>02</option>
+												<option>070</option>
+											</select>
+										</div>
+										<span class="dash">-</span>
+										<div class="txtEntry02"><input type="number" /></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- e: table -->
+				<div class="defaultAddress">
+					<label class="chkBox01" for="optDefault"><input type="checkbox" id="optDefault" />기본배송지로 지정</label>
+				</div>
+			</div>
+
+			<p class="noticeTxt01">
+				배송 및 수거를 위한 고객님의 배송주소 재사용에 동의합니다.<br />
+				※ 배송지는 목록에서 삭제하실 수 있습니다.
+			</p>
+
+			<div class="btnAlign_type01 n2">
+				<div><a href="#" class="btn_type01 b02">추가</a></div>
+				<div><a href="#" class="btn_type01">완료</a></div>
+			</div>
+
+		</div>
+	</div>
+	<!-- e: body -->
+
+</body>
+</html>

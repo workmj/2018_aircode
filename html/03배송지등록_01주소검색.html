@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> Hmall </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<script src="../js/jquery-2.2.4.min.js"></script>
+
+	<link rel="stylesheet" href="../css/default.css" />
+	<script src="../js/ui.js"></script>
+
+</head>
+<body>
+
+	<!-- s: header -->
+	<header id="header_container">
+		<h1 class="title">주소 검색</h1>
+		<div class="rBox">
+			<a href="#" class="btn prev"><span>이전</span></a>
+			<a href="#" class="btn close"><span>종료</span></a>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<div id="body_container" class="findAddress_page">
+		<section class="body_inner">
+
+			<!-- s: 검색 -->
+			<div class="search_wrap">
+				<div class="srhEntry01">
+					<input type="search" placeholder="주소를 입력해 주세요." />
+					<a href="#" class="btnSrh"><img src="../images/ico_search01.png" width="17" height="17" alt="검색" /></a>
+				</div>
+			</div>
+			<!-- e: 검색 -->
+
+			<!-- s: header -->
+			<div class="header_wrap">
+				<div class="selectBox01 inline">
+					<em class="labelTxt">시/도</em>
+					<select>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>강원도</option>
+					</select>
+				</div>
+				<div class="selectBox01 inline">
+					<em class="labelTxt">시/군/구</em>
+					<select>
+						<option>구로구</option>
+						<option>서초구</option>
+						<option>강남구</option>
+					</select>
+				</div>
+				<div class="total"><em>999</em>건</div>
+			</div>
+			<!-- e: header -->
+
+			<!-- s: table -->
+			<div class="table_type02">
+				<table>
+					<col style="width:79.375%;" />
+					<col style="width:20.625%;" />
+					<tbody>
+						<!-- s: repeat -->
+						<tr class="gp">
+							<td><span class="ico02">도로명</span> 서울시 금천구 디지털 2로 123</td>
+							<td class="tac" rowspan="2"><strong>12346</strong></td>
+						</tr>
+						<tr>
+							<td><span class="ico02">지번</span> 서울시 금천구 가산동 459-18</td>
+						</tr>
+						<!-- e: repeat -->
+						<!-- s: repeat -->
+						<tr class="gp">
+							<td><span class="ico02">도로명</span> 서울시 금천구 가산동 459-18</td>
+							<td class="tac" rowspan="2"><strong>12346</strong></td>
+						</tr>
+						<tr>
+							<td><span class="ico02">지번</span> 서울특별시 금천구 가산동 459-18</td>
+						</tr>
+						<!-- e: repeat -->
+						<!-- s: repeat -->
+						<tr class="gp">
+							<td><span class="ico02">도로명</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+							<td class="tac" rowspan="2"><strong>065044</strong></td>
+						</tr>
+						<tr>
+							<td><span class="ico02">지번</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+						</tr>
+						<!-- e: repeat -->
+						<!-- s: repeat -->
+						<tr class="gp">
+							<td><span class="ico02">도로명</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+							<td class="tac" rowspan="2"><strong>065044</strong></td>
+						</tr>
+						<tr>
+							<td><span class="ico02">지번</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+						</tr>
+						<!-- e: repeat -->
+						<!-- s: repeat -->
+						<tr class="gp">
+							<td><span class="ico02">도로명</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+							<td class="tac" rowspan="2"><strong>065044</strong></td>
+						</tr>
+						<tr>
+							<td><span class="ico02">지번</span> 서울특별시 서초구 신반포로 270 (반포동,반포자이아파트)</td>
+						</tr>
+						<!-- e: repeat -->
+					</tbody>
+				</table>
+			</div>
+			<!-- e: table -->
+
+		</section>
+	</div>
+	<!-- e: body -->
+
+</body>
+</html>

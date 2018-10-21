@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> Hmall </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<script src="../js/jquery-2.2.4.min.js"></script>
+
+	<link rel="stylesheet" href="../css/default.css" />
+	<script src="../js/ui.js"></script>
+
+</head>
+<body>
+
+	<!-- s: header -->
+	<header id="header_container">
+		<h1 class="title">카드등록</h1>
+		<div class="rBox">
+			<a href="#" class="btn prev"><span>이전</span></a>
+			<a href="#" class="btn close"><span>종료</span></a>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<div id="body_container" class="card_page hasbtn">
+		<div class="body_inner">
+
+			<div class="content_section card">
+				<div class="btn_scan"><a href="#">카드 스캔하기</a></div>
+				<!-- s: table -->
+				<div class="table_type01">
+					<table>
+						<col style="width:80px;" />
+						<col />
+						<tbody>
+							<tr>
+								<th>카드번호</th>
+								<td>
+									<div class="cardNumber">
+										<div class="txtEntry02"><input type="number" class="tac" /></div>
+										<span class="dash">-</span>
+										<div class="txtEntry02"><input type="number" class="tac" /></div>
+										<span class="dash">-</span>
+										<div class="txtEntry02"><input type="password" class="tac" /></div>
+										<span class="dash">-</span>
+										<div class="txtEntry02"><input type="password" class="tac" /></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>유효기간</th>
+								<td class="tar">
+									<span class="txtEntry02" style="width:48.7%;"><input type="text" class="tar" placeholder="00/00" /></span>
+								</td>
+							</tr>
+							<tr>
+								<th>카드 비밀번호</th>
+								<td class="tar">
+									<span class="txtEntry02 pt" style="width:48.7%;"><input type="password" class="tar" placeholder="앞 2자리" /></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- e: table -->
+			</div>
+
+			<div class="content_section installment">
+				<!-- s: table -->
+				<div class="table_type01">
+					<table>
+						<col style="width:80px;" />
+						<col />
+						<tbody>
+							<tr>
+								<th>할부기간 선택</th>
+								<td class="tar">
+									<!-- <span class="txtEntry02" style="width:74.35%;"><input type="text" class="tar" placeholder="앞 2자리" /></span> -->
+									<div class="selectBox01 inline" style="width:74.35%;">
+										<em class="labelTxt">일시불</em>
+										<select>
+											<option>일시불</option>
+											<option>1개월</option>
+											<option>2개월</option>
+											<option>3개월</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- e: table -->
+			</div>
+
+			<div class="btnAlign_type01">
+				<a href="#" class="btn_type01">확인</a>
+			</div>
+
+		</div>
+	</div>
+	<!-- e: body -->
+
+</body>
+</html>
