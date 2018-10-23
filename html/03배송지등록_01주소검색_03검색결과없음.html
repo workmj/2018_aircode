@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> Hmall </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<script src="../js/jquery-2.2.4.min.js"></script>
+
+	<link rel="stylesheet" href="../css/default.css" />
+	<script src="../js/ui.js"></script>
+
+</head>
+<body>
+
+	<!-- s: header -->
+	<header id="header_container">
+		<h1 class="title">주소 검색</h1>
+		<div class="rBox">
+			<a href="#" class="btn prev"><span>이전</span></a>
+			<a href="#" class="btn close"><span>종료</span></a>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<div id="body_container" class="findAddress_page">
+		<section class="body_inner">
+
+			<!-- s: 검색 -->
+			<div class="search_wrap">
+				<div class="srhEntry01">
+					<input type="search" placeholder="주소를 입력해 주세요." />
+					<a href="#" class="btnSrh"><img src="../images/ico_search01.png" width="17" height="17" alt="검색" /></a>
+				</div>
+			</div>
+			<!-- e: 검색 -->
+
+			<!-- s: header -->
+			<div class="header_wrap">
+				<div class="selectBox01 inline">
+					<em class="labelTxt">시/도</em>
+					<select>
+						<option>서울특별시</option>
+						<option>경기도</option>
+						<option>강원도</option>
+					</select>
+				</div>
+				<div class="selectBox01 inline">
+					<em class="labelTxt">시/군/구</em>
+					<select>
+						<option>구로구</option>
+						<option>서초구</option>
+						<option>강남구</option>
+					</select>
+				</div>
+				<div class="total"><em>999</em>건</div>
+			</div>
+			<!-- e: header -->
+
+			<!-- s: nodata -->
+			<div class="nodata">
+				<h2 class="txt01">검색 결과가 없습니다.</h2>
+				<p class="txt02">
+					찾으시려는 주소에 잘못된 철자가 없는지,<br />
+					정확한 주소인지 다시한번 확인해 주세요.
+				</p>
+			</div>
+			<!-- e: nodata -->
+
+			<!-- s: tip -->
+			<div class="tip_wrap">
+				<h2 class="title"><span class="ico03">TIP</span>검색 방법</h2>
+				<ul class="list_type02">
+					<li>
+						도로명 + 건물번호
+						<p class="sub">(예: 판교역로 235, 올림픽로70길)</p>
+					</li>
+					<li>
+						동/읍/면/리 + 번지
+						<p class="sub">(예 : 신천동 7 - 30, 수유동 567-92)</p>
+					</li>
+					<li>
+						건물명, 아파트명
+						<p class="sub">(예: 현대아파트, 주공)</p>
+					</li>
+				</ul>
+			</div>
+			<!-- e: tip -->
+
+		</section>
+	</div>
+	<!-- e: body -->
+
+</body>
+</html>

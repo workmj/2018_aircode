@@ -3,8 +3,10 @@ $(function(){
 
 
 	/* 요소별 */
-	if( $('.selectBox01').length )	{ hmall.selectBox('.selectBox01'); };
-	if( $('.chkBox01').length )		{ hmall.checkBox.init('.chkBox01'); };
+	if( $('.selectBox01').length )			{ hmall.selectBox('.selectBox01'); };
+	if( $('.chkBox01').length )				{ hmall.checkBox.init('.chkBox01'); };
+	if( $('.list_type01.multiple').length )	{ hmall.listMultiple.init('.list_type01.multiple'); };
+	if( $('.srhEntry01').length )			{ hmall.formFocus('.srhEntry01'); };
 
 	/* main */
 	if( $('.main_page').length ) { hmall.page.main(); };
@@ -58,24 +60,53 @@ hmall = {
 					_$this.addClass('active');
 				}
 			});
+		},
+	},
+	listMultiple: {
+		init: function(trg){
+			var thisObj = this;
+			var $trg = $(trg);
+			$li = $trg.children('li');
 
-			/*if($this.attr('type') == 'radio'){ // radio
-				var $radio = $('input[name=' + $this.attr('name') + ']').closest(el);
-				$radio.removeClass('active');
-				$radio.each(function(idx){
-					var _$this = $(this);
-					if( _$this.find('input').prop('checked') ){
-						_$this.addClass('active');
-					}
-				});
-			} else { // checkbox
-				if( $this.prop('checked') ){
-					$thisBox.addClass('active');
-				} else {
-					$thisBox.removeClass('active');
-				}
-			}*/
-		}
+			// 초기값 셋팅
+			$trg.each(function(){
+				thisObj.movement($(this).children('li'), 0);
+			});
+
+			// 옵션 label 선택
+			$li.children('a').on('click', function(){
+				var $this = $(this);
+				var $thisLi = $this.closest(trg).children('li');
+				var idx = $this.closest(trg).children('li').index( $this.parent('li') );
+				thisObj.movement($thisLi, idx);
+			});
+
+			// 하위 옵션 선택
+			$li.find('ul').find('a').on('click', function(){
+				var $this = $(this);
+				var $allLi = $this.closest(trg).children('li');
+				var idx = $allLi.index( $this.closest('ul').parent('li') );
+
+				thisObj.movement($allLi, idx+1);
+
+				$this.closest('ul').find('li').removeClass('active');
+				$this.parent('li').addClass('active');
+				return false;
+			});
+		},
+		// 동작
+		movement: function($thisLi, idx){
+			$thisLi.removeClass('open');
+			$thisLi.eq(idx).addClass('open');
+		},
+	},
+	formFocus: function(trg){
+		$(document).on('focus', trg+' input', function(){
+			$(this).closest(trg).addClass('focus');
+		});
+		$(document).on('blur', trg+' input', function(){
+			$(this).closest(trg).removeClass('focus');
+		});
 	},
 }
 
