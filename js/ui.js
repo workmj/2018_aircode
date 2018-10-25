@@ -6,8 +6,9 @@ $(function(){
 	if( $('.selectBox01').length )			{ hmall.selectBox('.selectBox01'); };
 	if( $('.chkBox01').length )				{ hmall.checkBox.init('.chkBox01'); };
 	if( $('.list_type01.multiple').length )	{ hmall.listMultiple.init('.list_type01.multiple'); };
-	if( $('.srhEntry01').length )			{ hmall.formFocus('.srhEntry01'); };
+	if( $('.txtEntry01').length )			{ hmall.formFocus('.txtEntry01'); };
 	if( $('.txtEntry02').length )			{ hmall.formFocus('.txtEntry02'); };
+	if( $('.srhEntry01').length )			{ hmall.formFocus('.srhEntry01'); };
 
 	/* main */
 	if( $('.main_page').length ) { hmall.page.main(); };
