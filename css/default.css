@@ -50,7 +50,7 @@
 	#header_container .rBox .btn::before {content:""; position:absolute; left:-1px; top:50%; width:1px; height:8px; margin-top:-4px; background-color:#666; margin-left:1px;}
 	#header_container .rBox .btn:first-child {margin-left:0;}
 	#header_container .rBox .btn:first-child::before {content:normal;}
-	#header_container .rBox .btn span {display:block; height:51px; line-height:51px; font-size:12px; color:#666; padding-right:14px;}
+	#header_container .rBox .btn span {display:block; height:51px; line-height:51px; font-size:13px; color:#666; padding-right:14px;}
 	#header_container .rBox .btn.prev span {background:url("../images/btn_prev01.png") right center no-repeat; background-size:10px 9px;}
 	#header_container .rBox .btn.close span {background:url("../images/btn_close01.png") right center no-repeat; background-size:9px 9px;}
 
@@ -82,8 +82,8 @@
 	body .btn_type01.b02 {background-color:#fff; border:1px solid #ff5340; color:#ff5340; line-height:38px;}
 	body .btn_type02 {box-sizing:border-box; display:inline-block; vertical-align:middle; padding:0 8px; height:29px; line-height:29px; text-align:center; color:#fff; font-size:11px; background-color:#333;}
  	body .btn_type03 {position:fixed; left:0; right:0; bottom:0; text-align:center; background-color:#edeef0; box-sizing:border-box; height:80px; padding-top:32px;}
- 	body .btn_type03 a {text-decoration:underline; color:#666; font-size:12px;}
- 	body .btn_type04 {box-sizing:border-box; display:block; height:24px; line-height:22px; text-align:center; color:#888; font-size:10px; font-weight:bold; border:1px solid #d3d3d3;}
+ 	body .btn_type03 a {text-decoration:underline; color:#666; font-size:13px;}
+ 	body .btn_type04 {box-sizing:border-box; display:block; height:24px; line-height:22px; text-align:center; color:#888; font-size:12px; font-weight:bold; border:1px solid #d3d3d3; letter-spacing:-1px;}
 	body .btn_type05 {box-sizing:border-box; display:block; height:29px; line-height:29px; text-align:center; color:#fff; font-size:14px; font-weight:bold; background-color:#ff5340;}
 	body .btn_type05.b01 {background-color:#666;}
 	body .btn_type05.sm {font-size:12px;}
@@ -104,10 +104,10 @@
  */
 	.table_type01 {padding:0 10px;}
 	.table_type01 table {width:100%;}
-	.table_type01 tbody th {color:#666; font-size:11px; text-align:left; padding:3px 0;}
+	.table_type01 tbody th {color:#666; font-size:13px; text-align:left; padding:3px 0;}
 	.table_type01 tbody th.vat {vertical-align:top; padding-top:10px;}
 	.table_type01 tbody td {padding:3px 0;}
-	.table_type01 .t_subTxt01 {padding-top:5px; color:#888; font-size:12px;}
+	.table_type01 .t_subTxt01 {padding-top:5px; color:#888; font-size:13px;}
 	.table_type01 .gp01 {padding-top:5px;}
 	.table_type01 .dash {float:left; line-height:29px; text-align:center;}
 	.table_type01 .cardNumber {}
@@ -138,7 +138,7 @@
 	.stt_section .signal_wrap {text-align:center; position:relative; margin-top:25px;}
 	.stt_section .signal_wrap::before {content:""; position:absolute; left:0; right:0; top:50%; height:1px; background-color:#ff5340;}
 	.stt_section .signal_wrap img {position:relative;}
-	.stt_section .result {display:block; text-align:center; font-size:16px; color:#ff5340; margin-top:25px;}
+	.stt_section .result {display:block; text-align:center; font-size:18px; color:#ff5340; margin-top:25px;}
 	.stt_section .warning {position:absolute; left:0; right:0; bottom:14px; text-align:center;}
 	.stt_section .warning span {position:relative; padding-left:18px; font-size:11px; color:#222;}
 	.stt_section .warning span::before {content:""; position:absolute; left:0; top:50%; margin-top:-6px; width:13px; height:12px; background:url("../images/bg_warning01.png") 0 0 no-repeat; background-size:13px 12px;}
@@ -163,12 +163,12 @@
  *	form
  */
 	.txtEntry01 {border:1px solid #ccc; box-sizing:border-box; height:29px;}
-	.txtEntry01 input {box-sizing:border-box; width:100%; height:100%; padding:0 10px; border:0; font-size:12px;}
+	.txtEntry01 input {box-sizing:border-box; width:100%; height:100%; padding:0 10px; border:0; font-size:13px;}
 	.txtEntry01 input:focus {outline:0;}
 	.txtEntry01.focus {border-color:#ff5340;}
 
 	.txtEntry02 {box-sizing:border-box; border-bottom:1px solid #ccc; height:29px;}
-	.txtEntry02 input {box-sizing:border-box; width:100%; height:100%; padding:0 6px; border:0; font-size:12px; border:0;}
+	.txtEntry02 input {box-sizing:border-box; width:100%; height:100%; padding:0 6px; border:0; font-size:13px; border:0;}
 	.txtEntry02 input:focus {outline:0;}
 	span.txtEntry02 {display:inline-block; vertical-align:middle;}
 	.txtEntry02.focus {border-color:#ff5340;}
@@ -215,10 +215,14 @@
 /*
  *	main
  */
-	#body_container.main_page .body_inner {height:100%;}
+	#body_container.main_page .body_inner {height:100%; padding-top:0;}
 
 	.main_page .tv_section {box-sizing:border-box; min-height:100%; padding:11px 0 140px;}
-	.main_page .tv_section .header_wrap {margin:0 15px 5px;}
+	.main_page .tv_section .header_wrap {margin-bottom:5px; padding:0 15px; position:relative;}
+	.main_page .tv_section .header_wrap .btn_prev {position:absolute; right:15px; top:0; width:25.625%;}
+	.main_page .tv_section .header_wrap .btn_prev img {width:100%; height:auto;}
+	.main_page .tv_section .header_wrap .btn_prev span {font-size:4vw; position:absolute; left:10.9756%; right:0; top:0; bottom:0; text-align:center;}
+	.main_page .tv_section .header_wrap .btn_prev span::after {content:""; display:inline-block; vertical-align:middle; height:100%;}
 	.main_page .tv_section .remote_wrap {padding-bottom:5.5172%; position:relative; margin:0 15px;}
 	.main_page .tv_section .remote_wrap .direction {position:relative; overflow:hidden;}
 	.main_page .tv_section .remote_wrap .direction .bg {width:100%; height:auto;}
@@ -252,7 +256,7 @@
 	.main_page .tv_section .btn_wrap .btn a::before {left:0;}
 	.main_page .tv_section .btn_wrap .btn a::after {right:0; background-position:0 -100px;}
 
-	.main_page .mobile_section {background-color:#fff; height:125px; margin-top:-125px; padding:13px 15px 0; box-sizing:border-box;}
+	.main_page .mobile_section {background-color:#fff; height:120px; margin-top:-120px; padding:13px 15px 0; box-sizing:border-box;}
 	.main_page .mobile_section .header_wrap {margin-bottom:17px;}
 	.main_page .mobile_section .btn_wrap {}
 	.main_page .mobile_section .btn_wrap::after {content:""; display:block; clear:both;}
@@ -289,7 +293,7 @@
  	.card_page .content_section.installment {padding:27px 0;}
 
  	.card_page .scan_section {width:252px; height:196px; position:fixed; left:50%; top:50%; margin:-110px 0 0 -126px;}
- 	.card_page .scan_section .title {text-align:center; font-size:12px; color:#666; margin-bottom:12px; font-weight:normal;}
+ 	.card_page .scan_section .title {text-align:center; font-size:13px; color:#666; margin-bottom:12px; font-weight:normal;}
  	.card_page .scan_section .camera_wrap {height:162px; margin:0 auto; background-color:#000; border-radius:15px; overflow:hidden;}
 
 
@@ -349,7 +353,7 @@
  	.complete_page .content_section.complete {padding:160px 50px 20px; text-align:center; word-break:keep-all; letter-spacing:-1px; color:#222; background:#fff url("../images/bg_complete01.png") center 58px no-repeat; background-size:63px 63px;}
  	.complete_page .content_section.complete .title {font-size:19px;}
  	.complete_page .content_section.complete .txt01 {text-decoration:underline; font-weight:bold; margin-top:30px; color:#87888d;}
- 	.complete_page .content_section.complete .txt01 span {color:#222;}
+ 	.complete_page .content_section.complete .txt01 span {color:#222; font-size:15px;}
  	.complete_page .content_section.complete .txt02 {font-size:16px; font-weight:bold; margin-top:30px; line-height:1.4;}
  	.complete_page .content_section.complete .txt03 {font-size:12px; color:#888; margin-top:13px; line-height:1.4;}
 
@@ -363,7 +367,7 @@
  	.stt_page .content_section.guide {box-sizing:border-box; padding:20px 10px 20px 20px; font-size:0;}
  	.stt_page .content_section.guide::after {content:""; width:10px; display:inline-block; vertical-align:middle; height:40px;}
  	.stt_page .content_section.guide .inner {display:inline-block; vertical-align:middle;}
- 	.stt_page .content_section.guide p {margin-top:7px; line-height:1.4; font-size:10px; color:#999; letter-spacing:-1px;}
+ 	.stt_page .content_section.guide p {margin-top:7px; line-height:1.4; font-size:11px; color:#999; letter-spacing:-1px;}
  	.stt_page .content_section.guide p:first-child {margin-top:0;}
 
 
@@ -375,31 +379,31 @@
 
  	.touch_page .content_section.touch {position:relative; padding:40px 20px 0; box-sizing:border-box; height:186px;}
  	.touch_page .content_section.touch .title {font-size:18px; letter-spacing:-1px; line-height:1.4;}
- 	.touch_page .content_section.touch .desc {font-size:11px; color:#999; margin-top:8px; letter-spacing:-1px; line-height:1.4;}
+ 	.touch_page .content_section.touch .desc {font-size:13px; color:#999; margin-top:8px; letter-spacing:-1px; line-height:1.4;}
  	.touch_page .content_section.touch .btn_mike {position:absolute; right:19px; bottom:19px;}
 
- 	.touch_page .list_section {position:fixed; left:0; right:0; bottom:0; top:293px;}
+ 	.touch_page .list_section {position:fixed; left:0; right:0; bottom:0; top:293px; box-sizing:border-box; background-color:#fff; padding:30px 0;}
  	/*.touch_page .list_section::before,
  	.touch_page .list_section::after {content:""; position:absolute; left:0; right:0; height:30px; background-color:#fff; z-index:100;}
  	.touch_page .list_section::before {top:0;}
  	.touch_page .list_section::after {bottom:0;}*/
- 	.touch_page .list_section .section_inner {position:absolute; left:0; right:0; bottom:0; background-color:#fff; max-height:100%; overflow-y:auto; padding:30px; box-sizing:border-box;}
+ 	.touch_page .list_section .section_inner {/*position:absolute; left:0; right:0; bottom:0; background-color:#fff; max-height:100%; overflow-y:auto; padding:30px; box-sizing:border-box;*/ height:100%; overflow-y:auto; padding:0 30px; box-sizing:border-box;}
  	.touch_page .list_section .list_type01 {}
-	.touch_page .list_section .adrress_wrap {}
-	.touch_page .list_section .adrress_wrap .btn_add {display:block; height:30px; box-sizing:border-box; line-height:28px; border:1px solid #666; text-align:center; font-weight:bold; position:absolute; left:0; right:0; top:0;}
+	.touch_page .list_section .adrress_wrap {padding-top:38px;}
+	.touch_page .list_section .adrress_wrap .btn_add {display:block; height:30px; box-sizing:border-box; line-height:28px; border:1px solid #666; text-align:center; font-weight:bold; position:absolute; left:30px; right:30px; top:30px; background-color:#fff; z-index:100;}
 	.touch_page .list_section .adrress_wrap .btn_add span {display:inline-block; padding-left:16px; position:relative;}
 	.touch_page .list_section .adrress_wrap .btn_add span::before,
 	.touch_page .list_section .adrress_wrap .btn_add span::after {content:""; position:absolute; background-color:#222;}
 	.touch_page .list_section .adrress_wrap .btn_add span::before {left:0; top:50%; width:10px; height:2px; margin-top:-1px;}
 	.touch_page .list_section .adrress_wrap .btn_add span::after {left:4px; top:50%; width:2px; height:10px; margin-top:-5px;}
-	.touch_page .list_section .adrress_wrap .btn_add + .content {margin-top:8px;}
+	/*.touch_page .list_section .adrress_wrap .btn_add + .content {margin-top:8px;}*/
 	.touch_page .list_section .adrress_wrap .content {}
 	.touch_page .list_section .adrress_wrap .content .item {margin-top:-1px; border:1px solid #ccc; padding:12px 0 9px; position:relative;}
 	.touch_page .list_section .adrress_wrap .content .item:first-child {margin-top:0;}
 	.touch_page .list_section .adrress_wrap .content .item.default {border-color:#ff5d47; z-index:10;}
 	.touch_page .list_section .adrress_wrap .content .inner {padding:0 12px;}
-	.touch_page .list_section .adrress_wrap .content .name {font-size:12px;}
-	.touch_page .list_section .adrress_wrap .content .address {font-size:11px; margin-top:8px; line-height:1.5; color:#888;}
+	.touch_page .list_section .adrress_wrap .content .name {font-size:13px;}
+	.touch_page .list_section .adrress_wrap .content .address {font-size:12px; margin-top:8px; line-height:1.5; color:#888;}
 	.touch_page .list_section .adrress_wrap .content .address .ct01 {display:block; letter-spacing:-1px;}
 	.touch_page .list_section .adrress_wrap .content .address .ct02 {display:block;}
 	.touch_page .list_section .adrress_wrap .content .address .ct03 {}
