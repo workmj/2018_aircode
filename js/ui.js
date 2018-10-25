@@ -127,7 +127,7 @@ hmall = {
 		$(document).on('focus', trg+' input', function(){
 			var $this = $(this);
 			var nPos = $this.offset().top - $('#header_container').height() - 20 ;
-			// console.log(nPos);
+			console.log(nPos);
 			setTimeout(function(){
 				$('html, body').scrollTop(nPos);
 			}, 500);
