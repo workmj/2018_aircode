@@ -127,10 +127,10 @@ hmall = {
 		$(document).on('focus', trg+' input', function(){
 			var $this = $(this);
 			var nPos = $this.offset().top - $('#header_container').height() - 20 ;
-			console.log(nPos, 5);
+			console.log(nPos, 400);
 			setTimeout(function(){
 				$('html, body').scrollTop(nPos);
-			}, 600);
+			}, 400);
 		});
 		/*$(window).on('scroll', function(){
 			console.log( $(window).scrollTop() )
