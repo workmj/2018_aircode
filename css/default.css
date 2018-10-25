@@ -165,11 +165,11 @@
 	.txtEntry01 {border:1px solid #ccc; box-sizing:border-box; height:29px;}
 	.txtEntry01 input {box-sizing:border-box; width:100%; height:100%; padding:0 10px; border:0; font-size:12px;}
 
-	.txtEntry02 {box-sizing:border-box; /*border-bottom:1px solid #ccc;*/ height:29px;}
-	.txtEntry02 input {box-sizing:border-box; width:100%; height:100%; padding:0 6px; border:0; font-size:12px; border-bottom:1px solid #ccc;}
-	.txtEntry02 input:focus {border-bottom-color:#ff5340; outline:0;}
-	/*.txtEntry02.pt {border-color:#ff5340;}*/
+	.txtEntry02 {box-sizing:border-box; border-bottom:1px solid #ccc; height:29px;}
+	.txtEntry02 input {box-sizing:border-box; width:100%; height:100%; padding:0 6px; border:0; font-size:12px; border:0;}
+	.txtEntry02 input:focus {outline:0;}
 	span.txtEntry02 {display:inline-block; vertical-align:middle;}
+	.txtEntry02.focus {border-color:#ff5340;}
 
 	.srhEntry01 {box-sizing:border-box; border:1px solid #ccc; height:35px; padding-right:35px; position:relative;}
 	.srhEntry01 input {box-sizing:border-box; width:100%; height:100%; padding:0 10px; border:0; font-size:12px;}
