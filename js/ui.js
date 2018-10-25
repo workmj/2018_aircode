@@ -130,7 +130,7 @@ hmall = {
 			console.log(nPos);
 			setTimeout(function(){
 				$('html, body').scrollTop(nPos);
-			}, 500);
+			}, 1000);
 		});
 		/*$(window).on('scroll', function(){
 			console.log( $(window).scrollTop() )
