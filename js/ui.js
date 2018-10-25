@@ -128,7 +128,9 @@ hmall = {
 			var $this = $(this);
 			var nPos = $this.offset().top - $('#header_container').height() - 20 ;
 			// console.log(nPos);
-			$('html, body').scrollTop(nPos);
+			setTimeout(function(){
+				$('html, body').scrollTop(nPos);
+			}, 500);
 		});
 		/*$(window).on('scroll', function(){
 			console.log( $(window).scrollTop() )
