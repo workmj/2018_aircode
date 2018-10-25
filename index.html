@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title> 프로젝트 UI개발 작업리스트 </title>
  	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700" rel="stylesheet" />
 	<style>
 		@charset "utf-8"; 
@@ -50,7 +50,7 @@
 		.header.fixed .shortcut dd {color:#fff; margin-right:10px;}
 		.header.fixed .shortcut a {color:#fff;}
 
-		.section {border-top:2px solid #333; border-bottom:1px solid #ddd; margin-bottom:20px; position:relative;}
+		.section {border-top:2px solid #333; border-bottom:1px solid #ddd; margin-bottom:20px;}
 		.section table {}
 		.section table caption {display:none;}
 		.section table thead th {color:#666; background-color:#eee; padding:8px; border:1px solid #ddd; border-top:0; font-size:11px;}
@@ -70,8 +70,6 @@
 		.section table tbody td .ct {padding-top:6px;}
 		.section a {display:block;}
 		.section a:hover {font-style:italic;}
-		.section .dimmed {position:absolute; left:0; right:0; top:0; bottom:0; background-color:rgba(0,0,0,0.6); color:#fff; font-size:24px; font-weight:bold; text-align:center;}
-		.section .dimmed::after {content:""; display:inline-block; vertical-align:middle; height:100%;}
 
 		.notice {padding-top:20px;}
 	</style>
@@ -124,7 +122,7 @@
 	<!-- s: header -->
 	<div class="header">
 		<div class="inner">
-			<h1>[ 코딩리스트 : <strong>홈쇼핑앱 내 모바일웹</strong> ]</h1>
+			<h1>[ 코딩리스트 : <strong>encore pop - Store</strong> ]</h1>
 			<dl>
 				<dt>UI개발 담당자</dt>
 				<dd>김문정</dd>
@@ -135,12 +133,13 @@
 			</dl>
 			<dl class="shortcut">
 				<dt>바로가기 메뉴</dt>
-				<dd><a href="#section01">01메인</a></dd>
-				<dd><a href="#section02">02입력</a></dd>
-				<dd><a href="#section03">03배송지등록</a></dd>
-				<dd><a href="#section04">04결제완료</a></dd>
-				<dd><a href="#section05">05음성인식</a></dd>
-				<dd><a href="#section06">06터치선택</a></dd>
+				<dd><a href="#sectionCommon">00공통</a></dd>
+				<dd><a href="#section01">01홈</a></dd>
+				<dd><a href="#section02">02특가</a></dd>
+				<dd><a href="#section03">03베스트</a></dd>
+				<dd><a href="#section04">04브랜드</a></dd>
+				<dd><a href="#section05">05MY</a></dd>
+				<dd><a href="#section06">06상품상세</a></dd>
 			</dl>
 			<ul class="guide">
 				<li>완료</li>
@@ -152,10 +151,24 @@
 	</div>
 	<!-- e: header -->
 
+	<button type="button" id="windowSize">화면사이즈 체크</button>
+	<p class="windowSize"></p>
+	<script type="text/javascript">
+		$(function(){
+			$("#windowSize").click(function(){
+				$(".windowSize").html(
+					"body사이즈 : " + $("body").width() + "x" + $("body").height() + "<br />" +
+					"window사이즈 : " + $(window).width() + "x" + $(window).height()
+				);
+				return false;
+			});
+		})
+	</script>
+
 
 
 	<div class="hd">
-		<h2 class="title" id="section01">01. 메인<span class="num"></span></h2>
+		<h2 class="title" id="sectionCommon">00. 공통<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -173,10 +186,24 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">메인</td>
-					<td class="depth">-</td>
+					<td class="depth">팝업</td>
+					<td class="depth">텍스트한줄 + 버튼1개</td>
 					<td>
-						<a href="html/01main.html">01main.html</a>
+						<a href="html/00공통_01팝업_01한줄+버튼1개.html">00공통_01팝업_01한줄+버튼1개.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="depth"></td>
+					<td class="depth">텍스트여러줄 + 버튼2개</td>
+					<td>
+						<a href="html/00공통_01팝업_02여러줄+버튼2개.html">00공통_01팝업_02여러줄+버튼2개.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="depth">검색</td>
+					<td class="depth"></td>
+					<td>
+						<a href="html/00공통_02검색.html">00공통_02검색.html</a>
 					</td>
 				</tr>
 			</tbody>
@@ -184,8 +211,10 @@
 	</div>
 	<!-- e: 코딩리스트 -->
 
+
+
 	<div class="hd">
-		<h2 class="title" id="section02">02. 입력<span class="num"></span></h2>
+		<h2 class="title" id="section01">01. 홈<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -203,45 +232,10 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">페어링인증번호입력</td>
+					<td class="depth">홈</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/02입력_01페어링인증번호입력.html">02입력_01페어링인증번호입력.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">비밀번호</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/02입력_02비밀번호.html">02입력_02비밀번호.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">적립금</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/02입력_03적립금.html">02입력_03적립금.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">카드등록</td>
-					<td class="depth">입력</td>
-					<td>
-						<a href="html/02입력_04카드등록_01입력.html">02입력_04카드등록_01입력.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth"></td>
-					<td class="depth">스캔</td>
-					<td>
-						<a href="html/02입력_04카드등록_02스캔.html">02입력_04카드등록_02스캔.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">연락처</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/02입력_05연락처.html">02입력_05연락처.html</a>
+						<a href="html/01홈.html">01홈.html</a>
 					</td>
 				</tr>
 			</tbody>
@@ -249,8 +243,10 @@
 	</div>
 	<!-- e: 코딩리스트 -->
 
+
+
 	<div class="hd">
-		<h2 class="title" id="section03">03. 배송지등록<span class="num"></span></h2>
+		<h2 class="title" id="section02">02. 특가<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -268,38 +264,10 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">배송지등록</td>
+					<td class="depth">특가</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/03배송지등록.html">03배송지등록.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">주소검색</td>
-					<td class="depth">모음</td>
-					<td>
-						<a href="html/03배송지등록_01주소검색_00모음.html">03배송지등록_01주소검색_00모음.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth"></td>
-					<td class="depth">기본</td>
-					<td>
-						<a href="html/03배송지등록_01주소검색_01기본.html">03배송지등록_01주소검색_01기본.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth"></td>
-					<td class="depth">검색결과</td>
-					<td>
-						<a href="html/03배송지등록_01주소검색_02검색결과.html">03배송지등록_01주소검색_02검색결과.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth"></td>
-					<td class="depth">검색결과없음</td>
-					<td>
-						<a href="html/03배송지등록_01주소검색_03검색결과없음.html">03배송지등록_01주소검색_03검색결과없음.html</a>
+						<a href="html/02특가.html">02특가.html</a>
 					</td>
 				</tr>
 			</tbody>
@@ -307,8 +275,10 @@
 	</div>
 	<!-- e: 코딩리스트 -->
 
+
+
 	<div class="hd">
-		<h2 class="title" id="section04">04. 결제완료<span class="num"></span></h2>
+		<h2 class="title" id="section03">03. 베스트<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -326,24 +296,10 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">무통장</td>
+					<td class="depth">베스트</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/04결제완료_01무통장.html">04결제완료_01무통장.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">카드</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/04결제완료_02카드.html">04결제완료_02카드.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">TV페이</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/04결제완료_03TV페이.html">04결제완료_03TV페이.html</a>
+						<a href="html/03베스트.html">03베스트.html</a>
 					</td>
 				</tr>
 			</tbody>
@@ -351,8 +307,10 @@
 	</div>
 	<!-- e: 코딩리스트 -->
 
+
+
 	<div class="hd">
-		<h2 class="title" id="section05">05. 음성인식<span class="num"></span></h2>
+		<h2 class="title" id="section04">04. 브랜드<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -370,59 +328,24 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">배송지선택</td>
+					<td class="depth">기본화면</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/05음성인식_01배송지선택.html">05음성인식_01배송지선택.html</a>
+						<a href="html/04브랜드_01기본화면.html">04브랜드_01기본화면.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">수량선택</td>
+					<td class="depth">카테고리선택</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/05음성인식_02수량선택.html">05음성인식_02수량선택.html</a>
+						<a href="html/04브랜드_02카테고리선택.html">04브랜드_02카테고리선택.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">사은품</td>
-					<td class="depth">선택</td>
-					<td>
-						<a href="html/05음성인식_03사은품_01선택.html">05음성인식_03사은품_01선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth"></td>
-					<td class="depth">확인</td>
-					<td>
-						<a href="html/05음성인식_03사은품_02확인.html">05음성인식_03사은품_02확인.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">쿠폰선택</td>
+					<td class="depth">브랜드선택</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/05음성인식_04쿠폰선택.html">05음성인식_04쿠폰선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">결제수단선택</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/05음성인식_05결제수단선택.html">05음성인식_05결제수단선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">옵션선택</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/05음성인식_06옵션선택.html">05음성인식_06옵션선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">결제완료</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/05음성인식_07결제완료.html">05음성인식_07결제완료.html</a>
+						<a href="html/04브랜드_03브랜드선택.html">04브랜드_03브랜드선택.html</a>
 					</td>
 				</tr>
 			</tbody>
@@ -430,8 +353,10 @@
 	</div>
 	<!-- e: 코딩리스트 -->
 
+
+
 	<div class="hd">
-		<h2 class="title" id="section06">06. 터치선택<span class="num"></span></h2>
+		<h2 class="title" id="section05">05. MY<span class="num"></span></h2>
 		<a href="#container" class="top">TOP</a>
 	</div>
 	<!-- s: 코딩리스트 -->
@@ -449,80 +374,112 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td class="depth">배송지선택</td>
+					<td class="depth">MY</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/06터치선택_01배송지선택.html">06터치선택_01배송지선택.html</a>
+						<a href="html/05MY.html">05MY.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">수량선택</td>
+					<td class="depth">내쿠폰함</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/06터치선택_02수량선택.html">06터치선택_02수량선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">사은품</td>
-					<td class="depth">필수옵션</td>
-					<td>
-						<a href="html/06터치선택_03사은품_01필수옵션.html">06터치선택_03사은품_01필수옵션.html</a>
+						<a href="html/05MY_01내쿠폰함.html">05MY_01내쿠폰함.html</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="depth"></td>
-					<td class="depth">선택옵션</td>
+					<td class="depth">상세</td>
 					<td>
-						<a href="html/06터치선택_03사은품_02선택옵션.html">06터치선택_03사은품_02선택옵션.html</a>
+						<a href="html/05MY_01내쿠폰함_01상세.html">05MY_01내쿠폰함_01상세.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="depth">이용내역</td>
+					<td class="depth">-</td>
+					<td>
+						<a href="html/05MY_02이용내역.html">05MY_02이용내역.html</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="depth"></td>
-					<td class="depth">선택옵션없음</td>
+					<td class="depth">상세 &gt; 배송상품</td>
 					<td>
-						<a href="html/06터치선택_03사은품_03선택옵션없음.html">06터치선택_03사은품_03선택옵션없음.html</a>
+						<a href="html/05MY_02이용내역_01상세_01배송상품.html">05MY_02이용내역_01상세_01배송상품.html</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="depth"></td>
-					<td class="depth">사은품확인</td>
+					<td class="depth">상세 &gt; 모바일쿠폰</td>
 					<td>
-						<a href="html/06터치선택_03사은품_04사은품확인.html">06터치선택_03사은품_04사은품확인.html</a>
+						<a href="html/05MY_02이용내역_01상세_02모바일쿠폰.html">05MY_02이용내역_01상세_02모바일쿠폰.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">쿠폰선택</td>
-					<td class="depth">기본</td>
+					<td class="depth">공지사항</td>
+					<td class="depth">-</td>
 					<td>
-						<a href="html/06터치선택_04쿠폰선택_01기본.html">06터치선택_04쿠폰선택_01기본.html</a>
+						<a href="html/05MY_03공지사항.html">05MY_03공지사항.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="depth">고객센터</td>
+					<td class="depth">1대1문의 &gt; 문의하기</td>
+					<td>
+						<a href="html/05MY_04고객센터_01문의하기_01문의하기.html">05MY_04고객센터_01문의하기_01문의하기.html</a>
 					</td>
 				</tr>
 				<tr>
 					<td class="depth"></td>
-					<td class="depth">중복선택</td>
+					<td class="depth">1대1문의 &gt; 나의문의내역</td>
 					<td>
-						<a href="html/06터치선택_04쿠폰선택_02중복선택.html">06터치선택_04쿠폰선택_02중복선택.html</a>
+						<a href="html/05MY_04고객센터_01문의하기_02문의내역.html">05MY_04고객센터_01문의하기_02문의내역.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">결제수단선택</td>
+					<td class="depth"></td>
+					<td class="depth">자주하는질문</td>
+					<td>
+						<a href="html/05MY_04고객센터_02자주하는질문.html">05MY_04고객센터_02자주하는질문.html</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- e: 코딩리스트 -->
+
+
+
+	<div class="hd">
+		<h2 class="title" id="section06">06. 상품상세<span class="num"></span></h2>
+		<a href="#container" class="top">TOP</a>
+	</div>
+	<!-- s: 코딩리스트 -->
+	<div class="section">
+		<table>
+			<col width="25%" />
+			<col width="25%" />
+			<col />
+			<thead>
+				<tr>
+					<th scope="col">2Depth</th>
+					<th scope="col">3Depth 이하</th>
+					<th scope="col">URL</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="depth">상품상세</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/06터치선택_05결제수단선택.html">06터치선택_05결제수단선택.html</a>
+						<a href="html/06상품상세.html">06상품상세.html</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="depth">옵션선택</td>
+					<td class="depth">구매하기</td>
 					<td class="depth">-</td>
 					<td>
-						<a href="html/06터치선택_06옵션선택.html">06터치선택_06옵션선택.html</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="depth">무통장입금</td>
-					<td class="depth">-</td>
-					<td>
-						<a href="html/06터치선택_07무통장입금.html">06터치선택_07무통장입금.html</a>
+						<a href="html/06상품상세_01구매하기.html">06상품상세_01구매하기.html</a>
 					</td>
 				</tr>
 			</tbody>

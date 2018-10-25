@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title> Store </title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<!-- s: swiper -->
+	<link rel="stylesheet" href="../css/swiper.min.css" />
+	<script src="../js/swiper.min.js"></script>
+	<!-- e: swiper -->
+
+	<!-- s: common -->
+	<link rel="stylesheet" href="../css/default.css" />
+	<script src="../js/jquery-2.2.4.min.js"></script>
+	<script src="../js/ui.js"></script>
+	<!-- e: common -->
+
+</head>
+<body>
+
+	<!-- s: header -->
+	<header id="header_container">
+		<h1 class="title">결제 정보</h1>
+		<div class="subBox rtl">
+			<a href="#"><span><img src="../images/btn_close01.png" width="15" height="15" alt="닫기" /></span></a>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<div id="body_container" class="payFail_page">
+		<section class="body_inner">
+
+			<h2 class="title">결제 승인에 실패했습니다.</h2>
+
+			<div class="detail_content">
+				<!-- s: table -->
+				<div class="table_type06">
+					<table>
+						<col style="width:60px;" />
+						<col />
+						<tbody>
+							<tr>
+								<th>충전금액</th>
+								<td>90,000 원</td>
+							</tr>
+							<tr>
+								<th>결제일시</th>
+								<td>2018.07.25  14:00</td>
+							</tr>
+							<tr>
+								<th>결제수단</th>
+								<td>신용 / 체크카드</td>
+							</tr>
+							<tr>
+								<th>실패코드</th>
+								<td><em class="imp01">0000000</em></td>
+							</tr>
+							<tr>
+								<th>실패코드</th>
+								<td><em class="imp01">F0005:결제가 중단되었습니다.(imp_249049411159) 01ㅣ사용자가 결제를 취소하셨습니다.</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- e: table -->
+			</div>
+
+			<p class="notictTxt">
+				실패 사유를 확인하신 후 재시도해주세요.<br />
+				계속 실패하는 경우 [1:1문의하기]에 문의해주세요.
+			</p>
+
+			<a href="#" class="btn_type03 btnConfirm">확인</a>
+
+		</section>
+	</div>
+	<!-- e: body -->
+
+</body>
+</html>
