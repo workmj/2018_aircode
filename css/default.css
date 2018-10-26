@@ -375,25 +375,24 @@
 /*
  *	터치선택
  */
- 	.touch_page {}
+ 	#body_container.touch_page {}
+ 	#body_container.touch_page .body_inner {padding-top:220px;}
 
- 	.touch_page .content_section.touch {position:relative; padding:40px 20px 0; box-sizing:border-box; height:186px;}
- 	.touch_page .content_section.touch .title {font-size:18px; letter-spacing:-1px; line-height:1.4;}
- 	.touch_page .content_section.touch .desc {font-size:13px; color:#999; margin-top:8px; letter-spacing:-1px; line-height:1.4;}
- 	.touch_page .content_section.touch .btn_mike {position:absolute; right:19px; bottom:19px;}
+ 	.touch_page .touch_section {position:fixed; left:0; right:0; top:51px; padding:17px 0; background-color:#edeef0; z-index:1000;}
+ 	.touch_page .touch_section .content_section {padding:40px 20px 0; box-sizing:border-box; height:186px; position:relative;}
+ 	.touch_page .touch_section .title {font-size:18px; letter-spacing:-1px; line-height:1.4;}
+ 	.touch_page .touch_section .desc {font-size:13px; color:#999; margin-top:8px; letter-spacing:-1px; line-height:1.4;}
+ 	.touch_page .touch_section .btn_mike {position:absolute; right:19px; bottom:19px;}
 
- 	.touch_page .list_section {position:fixed; left:0; right:0; bottom:0; top:293px; box-sizing:border-box; background-color:#fff; padding:30px 0;}
- 	/*.touch_page .list_section::before,
- 	.touch_page .list_section::after {content:""; position:absolute; left:0; right:0; height:30px; background-color:#fff; z-index:100;}
- 	.touch_page .list_section::before {top:0;}
- 	.touch_page .list_section::after {bottom:0;}*/
-	.touch_page .list_section .btn_add {height:30px; box-sizing:border-box; line-height:28px; border:1px solid #666; text-align:center; font-weight:bold; position:absolute; left:30px; right:30px; top:30px; background-color:#fff; z-index:100;}
+ 	.touch_page .list_section {box-sizing:border-box; background-color:#fff; padding:30px 0;}
+	.touch_page .list_section::before {content:""; position:fixed; left:0; right:0; top:271px; background-color:#fff; height:30px; z-index:100;}
+	.touch_page .list_section .btn_add {position:fixed; left:30px; right:30px; top:301px; height:30px; box-sizing:border-box; line-height:28px; border:1px solid #666; text-align:center; font-weight:bold; background-color:#fff; z-index:100;}
 	.touch_page .list_section .btn_add span {display:inline-block; padding-left:16px; position:relative;}
 	.touch_page .list_section .btn_add span::before,
 	.touch_page .list_section .btn_add span::after {content:""; position:absolute; background-color:#222;}
 	.touch_page .list_section .btn_add span::before {left:0; top:50%; width:10px; height:2px; margin-top:-1px;}
 	.touch_page .list_section .btn_add span::after {left:4px; top:50%; width:2px; height:10px; margin-top:-5px;}
- 	.touch_page .list_section .section_inner {/*position:absolute; left:0; right:0; bottom:0; background-color:#fff; max-height:100%; overflow-y:auto; padding:30px; box-sizing:border-box;*/ height:100%; /*overflow-y:auto;*/ padding:0 30px; box-sizing:border-box; overflow:hidden;}
+ 	.touch_page .list_section .section_inner {height:100%; overflow-y:auto; padding:0 30px; box-sizing:border-box;}
  	.touch_page .list_section .list_type01 {}
 	.touch_page .list_section .adrress_wrap {padding-top:38px;}
 	/*.touch_page .list_section .adrress_wrap .btn_add + .content {margin-top:8px;}*/
