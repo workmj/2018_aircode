@@ -37,7 +37,7 @@
 			</div>
 
 			<div class="list_section">
-				<div class="section_inner">
+				<div class="section_inner" id="wrapper">
 					<!-- s: 배송지 -->
 					<div class="adrress_wrap">
 						<a href="#" class="btn_add"><span>배송지 추가</span></a>
@@ -121,6 +121,12 @@
 					</div>
 					<!-- e: 배송지 -->
 				</div>
+				<script src="../js/iscroll.js"></script>
+				<script type="text/javascript">
+					$(function(){
+						var myScroll = new IScroll('#wrapper');
+					});
+				</script>
 			</div>
 
 		</section>

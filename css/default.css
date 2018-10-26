@@ -387,7 +387,7 @@
  	.touch_page .list_section::after {content:""; position:absolute; left:0; right:0; height:30px; background-color:#fff; z-index:100;}
  	.touch_page .list_section::before {top:0;}
  	.touch_page .list_section::after {bottom:0;}*/
- 	.touch_page .list_section .section_inner {/*position:absolute; left:0; right:0; bottom:0; background-color:#fff; max-height:100%; overflow-y:auto; padding:30px; box-sizing:border-box;*/ height:100%; overflow-y:auto; padding:0 30px; box-sizing:border-box;}
+ 	.touch_page .list_section .section_inner {/*position:absolute; left:0; right:0; bottom:0; background-color:#fff; max-height:100%; overflow-y:auto; padding:30px; box-sizing:border-box;*/ height:100%; /*overflow-y:auto;*/ padding:0 30px; box-sizing:border-box; overflow:hidden;}
  	.touch_page .list_section .list_type01 {}
 	.touch_page .list_section .adrress_wrap {padding-top:38px;}
 	.touch_page .list_section .adrress_wrap .btn_add {display:block; height:30px; box-sizing:border-box; line-height:28px; border:1px solid #666; text-align:center; font-weight:bold; position:absolute; left:30px; right:30px; top:30px; background-color:#fff; z-index:100;}
