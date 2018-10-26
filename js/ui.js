@@ -14,11 +14,11 @@ $(function(){
 	};
 	if( $('.txtEntry01').length ){
 		hmall.formFocus('.txtEntry01');
-		hmall.focusScrl('.txtEntry01');
+		// hmall.focusScrl('.txtEntry01');
 	};
 	if( $('.txtEntry02').length ){
 		hmall.formFocus('.txtEntry02');
-		hmall.focusScrl('.txtEntry02');
+		// hmall.focusScrl('.txtEntry02');
 	};
 	if( $('.srhEntry01').length ){
 		hmall.formFocus('.srhEntry01');
