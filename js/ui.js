@@ -124,20 +124,24 @@ hmall = {
 			$(this).closest(trg).removeClass('focus');
 		});
 	},
-	focusScrl: function(trg){
+	/*focusScrl: function(trg){
 		$(document).on('focus', trg+' input', function(){
 			var $this = $(this);
 			var nPos = $this.offset().top - $('#header_container').height() - 20 ;
-			console.log(nPos, 200);
+			// console.log(nPos, 200);
 			setTimeout(function(){
 				$('html, body').scrollTop(nPos);
 			}, 200);
 		});
-		/*$(window).on('scroll', function(){
-			console.log( $(window).scrollTop() )
-		});*/
-	},
+	},*/
 }
+
+
+hmall.iScrlOption = {
+	click: true,
+}
+
+
 
 hmall.page = {
 	main: function(){
